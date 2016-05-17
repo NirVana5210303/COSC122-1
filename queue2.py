@@ -60,6 +60,8 @@ class Queue2(object):
     def enqueue(self, item):
         """Add an item onto the tail of the queue."""
         # ---start student section---
+        self._items.append(item)
+        
         pass
         # ===end student section===
 
@@ -70,18 +72,23 @@ class Queue2(object):
         # use the following line to raise error if stack is empty
         # raise IndexError("Can't dequeue from empty queue.")
         # ---start student section---
-        pass
+        if len(self._items) > 0:
+            item = self._items.pop(0)
+            return item
+        else:
+            raise IndexError('Can\'t dequeue from an empty queue!')
         # ===end student section===
 
     def is_empty(self):
         # ---start student section---
-        pass
+        return len(self) == 0
         # ===end student section===
 
     def __len__(self):
         """ Returns the length --- calling len(q) will invoke this method"""
         # ---start student section---
-        pass
+        return len(self._items)
+
         # ===end student section===
 
     def __str__(self):
@@ -91,7 +98,10 @@ class Queue2(object):
         See doctests in class docstring
         """
         # ---start student section---
-        pass
+        string = ''
+        for i, value in(self._items):
+            string += 'List for queue is : {} --> \n'.format(i,value)
+            return string
         # ===end student section===
 
 

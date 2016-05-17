@@ -46,11 +46,13 @@ class Stack (object):
 
     def __init__(self):
         self.head = None
+        self.data = []
+        self.tail = None
 
     def push(self, item):
         """push a new item on to the stack"""
         # ---start student section---
-        pass
+        self.data.append(item)
         # ===end student section===
 
     def pop(self):
@@ -60,13 +62,19 @@ class Stack (object):
         # use the following line to raise error when stack is empty
         # raise IndexError("Can't pop from empty stack.")
         # ---start student section---
-        pass
+        if len(self.data) > 0:
+            item = self.data.pop()
+            return item
+        else:
         # ===end student section===
+        # raise an index error if list is empty, eg,
+            raise IndexError('Can\'t pop from empty stack.')
+        
 
     def peek(self):
         """pop an item on the top of the top of the stack, but don't remove it"""
         # ---start student section---
-        pass
+        return self.data[-1]
         # ===end student section===
 
     def isEmpty(self):
@@ -75,7 +83,7 @@ class Stack (object):
     def __len__(self):
         """ Returns the length --- calling len(s) will invoke this method """
         # ---start student section---
-        pass
+        return len(self.data)
         # ===end student section===
 
     def __str__(self):
@@ -85,7 +93,9 @@ class Stack (object):
         See doctests in class docstring
         """
         # ---start student section---
-        pass
+        string = ''
+    
+
         # ===end student section===
 
 
@@ -123,11 +133,13 @@ class Queue (object):
 
     def __init__(self):
         self.head = None
+        self.data = []
+        self.tail = None
 
     def enqueue(self, item):
         """Add an item onto the tail of the queue."""
         # ---start student section---
-        pass
+        self.data.append(item)
         # ===end student section===
 
     def dequeue(self):
@@ -137,18 +149,24 @@ class Queue (object):
         # use the following line to raise error when queue is empty
         # raise IndexError("Can't dequeue from empty queue.")        
         # ---start student section---
-        pass
+        if len(self.data) > 0:
+            item = self.data.pop(0)
+            return item
+        else:
+        # ===end student section===
+        # raise an index error if list is empty, eg,
+            raise IndexError('Can\'t dequeue from empty queue.')
         # ===end student section===
 
     def isEmpty(self):
         # ---start student section---
-        pass
+        return len(self) == 0
         # ===end student section===
 
     def __len__(self):
         """ Returns the length --- calling len(q) will invoke this method """
         # ---start student section---
-        pass
+        return len(self.data)
         # ===end student section===
 
     def __str__(self):
@@ -158,7 +176,11 @@ class Queue (object):
         See doctests in class docstring
         """
         # ---start student section---
-        pass
+        string = ''
+        while self.head != None:
+            self.getnext(item)
+            print("List for queue is: {} -> {} -> None".format(item))
+
         # ===end student section===
 
 

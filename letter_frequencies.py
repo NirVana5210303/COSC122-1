@@ -65,7 +65,12 @@ class FreqList(object):
         """
 
         # ---start student section---
-        pass
+        count = 0
+        for i in range(0,item):
+            if i == item:
+                count+=1
+             else:   
+            
         # ===end student section===
 
     def get_xy_for_plot(self):
