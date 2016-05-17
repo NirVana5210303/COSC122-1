@@ -1,0 +1,48 @@
+======================================================================
+FAIL: test_02_two_word_lists_real_comparisons (__main__.TestUnique)
+partial(func, *args, **keywords) - new function with partial application
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/cosc/course/cosc122/2014/ass/part2/marking/part2_progs/cry15/timeout.py", line 26, in __call__
+    result = self.function(*args)
+  File "test_unique_words_in_list.py", line 75, in test_02_two_word_lists_real_comparisons
+    self.assertEqual(comparisons, CounterList.__n_comparisons__)
+AssertionError: 3 != 4
+
+======================================================================
+FAIL: test_04_unique_lists (__main__.TestUnique)
+partial(func, *args, **keywords) - new function with partial application
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/cosc/course/cosc122/2014/ass/part2/marking/part2_progs/cry15/timeout.py", line 26, in __call__
+    result = self.function(*args)
+  File "test_unique_words_in_list.py", line 111, in test_04_unique_lists
+    self.assertGreaterEqual(comparisons, expected_comparisons_lower_limit)
+AssertionError: 9 not greater than or equal to 14
+
+======================================================================
+FAIL: test_07_longer_lists (__main__.TestUnique)
+partial(func, *args, **keywords) - new function with partial application
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/cosc/course/cosc122/2014/ass/part2/marking/part2_progs/cry15/timeout.py", line 26, in __call__
+    result = self.function(*args)
+  File "test_unique_words_in_list.py", line 196, in test_07_longer_lists
+    self.assertGreaterEqual(comparisons, expected_comparisons_lower_limit)
+AssertionError: 5825 not greater than or equal to 7084
+
+======================================================================
+FAIL: test_08_longer_lists_real_comparisons (__main__.TestUnique)
+partial(func, *args, **keywords) - new function with partial application
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/cosc/course/cosc122/2014/ass/part2/marking/part2_progs/cry15/timeout.py", line 26, in __call__
+    result = self.function(*args)
+  File "test_unique_words_in_list.py", line 213, in test_08_longer_lists_real_comparisons
+    self.assertEqual(comparisons, CounterList.__n_comparisons__)
+AssertionError: 5825 != 7053
+
+----------------------------------------------------------------------
+Ran 10 tests in 2.122s
+
+FAILED (failures=4)
